@@ -1,0 +1,14 @@
+# Loop over png files in currnet path
+for i in *.png ; do echo "$i" ; done
+
+# Loop over png files and convert trhm to jpg
+for i in *.png ; do ffmpeg -i "$i" "${i%.*}.jpg" ; done
+
+# Use YOLO to train the network
+export dataset_yaml_name=<dataset_name>
+echo ${dataset_yaml_name}.yaml
+python train.py --batch 8 --epochs 80 --img 640 --workers 18 --device 0 --hyp data/hyp.scratch.tiny.yaml --data data/${dataset_yaml_name}.yaml --cfg cfg/training/yolov7.yaml --weights 'yolov7-tiny.pt' --name ${dataset_yaml_name}
+
+# Use YOLO to test detection
+export video_to_detect=<path>/<video-name>.<video-extension>
+python detect.py --weights runs/train/${dataset_yaml_name}/weights/best.pt --conf 0.25 --img-size 640 --source ${video_to_detect}
