@@ -30,7 +30,7 @@ The object of this script is create:
 1. yaml annotation file in YOLO format 
 2. annotations in txt file as the YOLO format (x_center, y_center, width, heigh)
 >In yolo, a bounding box is represented by four values [x_center, y_center, width, height]. x_center and y_center are the normalized coordinates of the center of the bounding box. To make coordinates normalized, we take pixel values of x and y, which marks the center of the bounding box on the x- and y-axis. Then we divide the value of x by the width of the image and value of y by the height of the image. width and height represent the width and the height of the bounding box. They are normalized as well.
-3. filesystem tree as images
+3. a dataset in a filesystem tree as 
 ```
 <dataset-name>
 ├── test
