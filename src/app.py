@@ -4,7 +4,6 @@ import shutil
 import yaml
 from datetime import datetime as dt
 import json
-from pybboxes import BoundingBox
 from PIL import Image
 
 def main():
