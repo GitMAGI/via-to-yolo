@@ -1,6 +1,6 @@
 # via-to-yolo
 
-This pseudo-script aims to produce a valid data set suitable for YOLO (this is tested only for v7) [[2]](#2), starting from a json annotion file, in COCO format (<i> ... COCO is a large-scale object detection, segmentation, and captioning dataset ... </i> [[5]](#5)), exported by the web application VGG Image Annotator (VIA) [[1]](#1). 
+This pseudo-script aims to produce a valid data set suitable for YOLO (this is tested only for v7) [[2]](#2), starting from a json annotation file, in COCO format (<i> ... COCO is a large-scale object detection, segmentation, and captioning dataset ... </i> [[5]](#5)), exported by the web application VGG Image Annotator (VIA) [[1]](#1). 
 The walkthrough from VIA to YOLO requires intermediate processing and conversion steps, accomplished through the libraries such as PyLabel [[4]](#4) and PIL [[3]](#3).
 
 
